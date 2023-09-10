@@ -5,21 +5,30 @@ const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
 ages.sort();
 let len = ages.length;
 let min = ages[0];
-let max = ages[len-1];
-let med = len%2?(ages[Math.floor(len/2)]+ages[Math.ceil(len/2)])/2:ages[len/2];
-let avg = ages.reduce((x,y) => {return x+y})/len;
+let max = ages[len - 1];
+let med =
+  len % 2
+    ? (ages[Math.floor(len / 2)] + ages[Math.ceil(len / 2)]) / 2
+    : ages[len / 2];
+let avg =
+  ages.reduce((x, y) => {
+    return x + y;
+  }) / len;
 let range = max - min;
-let miAvg = Math.abs(min-avg)
-let maAvg = Math.abs(max-avg)
-console.log(min, max, med, avg, range, miAvg, maAvg)
+let miAvg = Math.abs(min - avg);
+let maAvg = Math.abs(max - avg);
+console.log(min, max, med, avg, range, miAvg, maAvg);
 
 //1.Slice the first ten countries from the countries array
 let firstCountries = countries.slice(0, 10);
-console.log(firstCountries)
+console.log(firstCountries);
 //Find the middle country(ies) in the countries array
-len = countries.length
-let middle = len%2?[countries[Math.floor(len/2)]].concat([countries[Math.ceil(len/2)]]):countries[len/2];
-console.log(middle)
+len = countries.length;
+let middle =
+  len % 2
+    ? [countries[Math.floor(len / 2)]].concat([countries[Math.ceil(len / 2)]])
+    : countries[len / 2];
+console.log(middle);
 //Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
-let first = countries.splice(0, Math.ceil(len/2));
-console.log(first, countries)
+let first = countries.splice(0, Math.ceil(len / 2));
+console.log(first, countries);
