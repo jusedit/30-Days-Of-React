@@ -41,3 +41,23 @@ let bmi = calculateBmi(82, 1.82);
 
 let weightClass = calculateWeightClass(bmi);
 console.log(bmi, weightClass);
+
+// Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+function checkSeason(month) {
+  const Autumn = ["September", "October", "November"];
+  const Winter = ["December", "January", "February"];
+  const Spring = ["March", "April", "May"];
+  const Summer = ["June", "July", "August"];
+
+  if (Autumn.includes(month)) {
+    return "Autumn";
+  } else if (Winter.includes(month)) {
+    return "Winter";
+  } else if (Spring.includes(month)) {
+    return "Spring";
+  } else if (Summer.includes(month)) {
+    return "Summer";
+  }
+}
+
+console.log(checkSeason("October"));
