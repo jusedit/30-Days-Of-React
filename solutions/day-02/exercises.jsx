@@ -119,3 +119,79 @@ const footer = (
     <p>Copyright 2023</p>
   </footer>
 );
+
+// Exercises: Inline Style
+// Create a style object for the main JSX
+
+const userStyle = {
+  color: "white",
+  margin: "20px auto"
+}
+const userStyled = (
+  <div className="user" style={userStyle}>
+    <h1>Jonas Nabbefeld</h1>
+    <p>Country: Germany</p>
+    <p>Title: Software Developer</p>
+    <p>Gender: Male</p>
+    <p>Email: example@mail.com</p>
+    <p>Phone: +49 1111 2345 678</p>
+  </div>
+);
+
+// Create a style object for the footer and app JSX
+
+const footerStyle = {
+  color: "white",
+  fontSize: "10px"
+}
+const footerStyled = (
+  <footer style={footerStyle}>
+    <p>Copyright 2023</p>
+  </footer>
+);
+const appStyle = {
+  background: "black",
+  fontSize: "18px"
+}
+const app = (
+  <div className='app' style={appStyle}>
+    {userStyled}
+    {footerStyled}
+  </div>
+)
+
+// Add more styles to the JSX elements
+
+// We could also use CSS in the header and target elements based on className
+// Example:
+const example = (<div className='app'></div>);
+/* CSS
+  .app{
+    background: black,
+    font-size: 18px
+  }
+*/
+
+// Exercises: Internal Styles
+
+const internalStyled =  (
+  <div className='app' style={{background: "black",  fontSize: "18px"}}>
+    {userStyled}
+    {footerStyled}
+  </div>
+)
+
+// Exercise: Inject data to JSX
+
+const name = "Jonas Nabbefeld";
+
+const userInjected = (
+  <div className="user">
+    <h1>{name}</h1>
+    <p>Country: Germany</p>
+    <p>Title: Software Developer</p>
+    <p>Gender: Male</p>
+    <p>Email: example@mail.com</p>
+    <p>Phone: +49 1111 2345 678</p>
+  </div>
+);
